@@ -103,19 +103,27 @@ main {
 .advantages {
     position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
+    // &::before, &::after {
+    //     content: '';
+    //     position: absolute;
         
-        height: 2px;
-        // width: calc(100% - 40px)
+    //     height: 2px;
+    //     // width: calc(100% - 40px)
         
-        left: 20px;
-        right: 20px;
-        top: 0;
+    //     left: 20px;
+    //     right: 20px;
 
-        background-color: #dcdbdb;
-    }
+    //     background-color: #dcdbdb;
+    // }
+
+    // &::before {
+    //     top: 0;
+    // }
+
+    // &::after {
+    //     // ось туточки
+    //     bottom: 0;
+    // }
 }
 
 .advantages-table {
@@ -140,3 +148,26 @@ main {
     }
 }
 
+.section {
+    position: relative;
+    padding: 40px 0;
+
+    &--border {
+        &::before {
+            content: '';
+            position: absolute;
+            
+            height: 2px;
+            // width: calc(100% - 40px)
+            
+            left: 20px;
+            right: 20px;
+
+            background-color: #dcdbdb;
+        }
+
+        &::before {
+            top: 0;
+        }
+    }
+}
